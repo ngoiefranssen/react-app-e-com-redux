@@ -1,4 +1,3 @@
-import React from 'react'
 
 export const ActionTypes = {
   // definitions of the methods to be used
