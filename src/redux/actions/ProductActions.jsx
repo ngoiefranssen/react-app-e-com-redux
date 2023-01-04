@@ -7,7 +7,6 @@ const setProducts = (products) => {
         payload : products,
     };
 };
-
 const selectedPrduts = (product) => {
     return {
         type: ActionTypes.SELECTED_PRODUCT,
