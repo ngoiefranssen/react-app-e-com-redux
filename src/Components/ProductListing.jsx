@@ -8,7 +8,7 @@ import ProductComponent from './ProductComponent'
 const ProductListing = () => {
 
   const products = useSelector((state) => state);
-  console.log(products);
+  // console.log(products);
   const dispatch = useDispatch()
 
   useEffect(() =>{
