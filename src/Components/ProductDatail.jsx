@@ -45,6 +45,11 @@ const ProductDatail = () => {
                       </h2>
                       <h3 className='ui brown block header'>{category}</h3>
                       <p>{description}</p>
+                      <div className='ui vertical animated button' tabIndex='0'>
+                        <div className='hidden content'>
+                          <i className='visible content'>Add to Cart</i>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
