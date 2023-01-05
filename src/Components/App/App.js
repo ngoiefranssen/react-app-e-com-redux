@@ -1,21 +1,25 @@
+import React from 'react'
 import Header from '../Header';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Router, Routes, Route } from 'react-router-dom'
 import ProductListing from '../ProductListing';
 import ProductDatail from '../ProductDatail';
 
 function App() {
   return (
     <div>
-      <Router>
-        <Routes>
+      <React.Fragment>
+        <Router>
           <Header />
-          <Route path='/' element={<ProductListing />} />
-          <Route path='/product/:productId' element={<ProductDatail />} />
-          {/* < Route path='' element={</>} /> */}
-          {/* // < Route path='' element={</>} /> */}
-        </Routes >
-      </Router>
+          <Routes>
+            <Route path='/' element={<ProductListing />} />
+            <Route path='/product/:productId' element={<ProductDatail />} />
+            {/* < Route path='' element={</>} /> */}
+            {/* // < Route path='' element={</>} /> */}
+          </Routes >
+        </Router>
+      </React.Fragment>
+
     </div >
   );
 }
