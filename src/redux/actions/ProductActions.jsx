@@ -1,13 +1,14 @@
 import { ActionTypes } from '../contants/ActionTypes'
-import React from 'react'
+// import React from 'react'
 
-const setProducts = (products) => {
+export const setProducts = (products) => {
     return {
         type : ActionTypes.SET_PRODUCTS,
         payload : products,
     };
 };
-const selectedPrduts = (product) => {
+
+export const selectedProducts = (product) => {
     return {
         type: ActionTypes.SELECTED_PRODUCT,
         payload : product,
