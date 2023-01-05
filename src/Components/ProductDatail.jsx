@@ -2,16 +2,16 @@ import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { selectedProducts } from '../redux/actions/ProductActions';
+import { selectedProducts, removeselectedProduct } from '../redux/actions/ProductActions';
 
 const ProductDatail = () => {
 
   const product = useSelector((state) => state.product);
+  const {image, title, description, category, price} = product;
   const{productId} = useParams();
   const dispatch = useDispatch();
 
-  
-
+  console.log(product)
   useEffect(() =>{
     if(productId && productId !== '')
     {
@@ -23,6 +23,10 @@ const ProductDatail = () => {
           });
         dispatch(selectedProducts(res.data));
       };
+    }
+
+    return () =>{
+      dispatch(removeselectedProduct())
     }
   });
   return (
@@ -47,8 +51,9 @@ const ProductDatail = () => {
                       <p>{description}</p>
                       <div className='ui vertical animated button' tabIndex='0'>
                         <div className='hidden content'>
-                          <i className='visible content'>Add to Cart</i>
+                          <i className='shop icon'></i>
                         </div>
+                        <div className='visible content'>Add to Cart</div>
                       </div>
                     </div>
                   </div>
