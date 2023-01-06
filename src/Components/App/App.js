@@ -7,18 +7,16 @@ import ProductDatail from '../ProductDatail';
 
 function App() {
   return (
-    <div>
+    <>
       <React.Fragment>
         <Header />
         <Routes>
           <Route path='/' element={<ProductListing />} />
           <Route path='/product/:productId' element={<ProductDatail />} />
-          {/* < Route path='' element={</>} /> */}
-          {/* // < Route path='' element={</>} /> */}
         </Routes >
       </React.Fragment>
 
-    </div >
+    </ >
   );
 }
 

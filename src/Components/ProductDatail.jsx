@@ -28,7 +28,7 @@ const ProductDatail = () => {
     return () =>{
       dispatch(removeselectedProduct())
     }
-  });
+  }, [productId]);
   return (
     <div className='ui grid container'>
       {
